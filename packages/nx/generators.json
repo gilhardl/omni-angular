@@ -6,9 +6,9 @@
       "description": "Create new Omni workspace.",
       "x-use-standalone-layout": true
     },
-    "app": {
-      "factory": "./src/generators/app/generator",
-      "schema": "./src/generators/app/schema.json",
+    "application": {
+      "factory": "./src/generators/application/generator",
+      "schema": "./src/generators/application/schema.json",
       "description": "Create new application."
     }
   }

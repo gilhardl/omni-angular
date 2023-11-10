@@ -69,5 +69,5 @@
       }
     }
   },
-  "tags": ["type:tool", "scope:nx"]
+  "tags": ["type:package", "scope:nx"]
 }
