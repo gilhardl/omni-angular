@@ -1,0 +1,20 @@
+{
+  "name": "@omni",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "docker:start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker compose up -d",
+        "cwd": "docker"
+      }
+    },
+    "docker:stop": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker compose down",
+        "cwd": "docker"
+      }
+    }
+  }
+}

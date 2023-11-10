@@ -1,0 +1,52 @@
+{
+  "name": "@omni/create-omni-workspace",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/create-omni-workspace/bin",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/create-omni-workspace",
+        "main": "apps/create-omni-workspace/bin/index.ts",
+        "tsConfig": "apps/create-omni-workspace/tsconfig.lib.json",
+        "assets": ["apps/create-omni-workspace/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/dist/src/publish.js @omni/create-omni-workspace {args.ver} {args.tag} {args.registry}",
+      "dependsOn": ["build"]
+    },
+    "publish:local": {
+      "command": "node tools/scripts/dist/src/publish.js @omni/create-omni-workspace {args.ver} next http://localhost:4873",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/create-omni-workspace/**/*.ts",
+          "apps/create-omni-workspace/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/create-omni-workspace/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": ["type:tools", "scope:nx"],
+  "implicitDependencies": ["@omni/nx"]
+}

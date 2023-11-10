@@ -1,0 +1,13 @@
+{
+  "name": "create-omni-workspace",
+  "version": "0.0.1",
+  "dependencies": {
+    "create-nx-workspace": "17.0.3"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "bin": {
+    "create-omni-workspace": "./bin/index.js"
+  }
+}

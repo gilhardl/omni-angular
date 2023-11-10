@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schemaa",
+  "$id": "https://github.com/gilhardl/omni/raw/main/packages/nx/src/generators/app/schema.json",
+  "title": "Angular application generator.",
+  "description": "Generate new Angular application.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The application's project name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for your application?"
+    }
+  },
+  "required": ["name"]
+}

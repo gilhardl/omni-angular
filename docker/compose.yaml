@@ -1,0 +1,8 @@
+services:
+  verdaccio:
+    build: ./verdaccio
+    container_name: 'omni_nx.verdaccio'
+    ports:
+      - 4873:4873
+    volumes:
+      - ../../../.cache/omni/packages/nx-e2e/verdaccio/storage:/verdaccio/storage

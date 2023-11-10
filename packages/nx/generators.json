@@ -1,0 +1,15 @@
+{
+  "generators": {
+    "preset": {
+      "factory": "./src/generators/preset/generator",
+      "schema": "./src/generators/preset/schema.json",
+      "description": "Create new Omni workspace.",
+      "x-use-standalone-layout": true
+    },
+    "app": {
+      "factory": "./src/generators/app/generator",
+      "schema": "./src/generators/app/schema.json",
+      "description": "Create new application."
+    }
+  }
+}
