@@ -5,4 +5,4 @@ services:
     ports:
       - 4873:4873
     volumes:
-      - ../../../.cache/omni/packages/nx-e2e/verdaccio/storage:/verdaccio/storage
+      - ../.cache/omni/packages/nx-e2e/verdaccio/storage:/verdaccio/storage
