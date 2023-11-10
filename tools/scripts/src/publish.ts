@@ -43,13 +43,19 @@ invariant(
   `Could not find project "${name}" in the workspace. Is the project.json configured correctly?`
 );
 
-const outputPath = project.data.targets?.['build']?.options['outputPath'];
+let outputPath: string | undefined =
+  project.data.targets?.['build']?.options['outputPath'] ??
+  (project.data.targets?.['build']?.outputs || []).shift();
+if (outputPath) {
+  outputPath = outputPath.replace('{workspaceRoot}/', '');
+}
+
 invariant(
-  outputPath,
-  `Could not find "build.options.outputPath" of project "${name}". Is project.json configured  correctly?`
+  !!outputPath,
+  `Could not find "build.options.outputPath" or parse first "build.outputs" of project "${name}". Is project.json configured  correctly?`
 );
 
-process.chdir(outputPath);
+process.chdir(outputPath!);
 
 // Updating the version in "package.json" before publishing
 try {
@@ -61,6 +67,4 @@ try {
 }
 
 // Execute "npm publish" to publish
-execSync(
-  `npm publish --access public --version ${version} --tag ${tag} --registry ${registry}`
-);
+execSync(`npm publish --access public --tag ${tag} --registry ${registry}`);
