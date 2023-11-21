@@ -16,10 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@omni/app": ["libs/core/app/src/index.ts"],
-      "@omni/core": ["packages/core/src/index.ts"],
-      "@omni/home-feature": ["libs/starter/home/feature/src/index.ts"],
-      "@omni/nx": ["packages/nx/src/index.ts"],
-      "@omni/scripts": ["tools/scripts/src/index.ts"]
+      "@omni/home-feature": ["libs/starter/home/feature/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
