@@ -6,5 +6,5 @@ export default {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/create-omni-workspace',
+  coverageDirectory: '../../coverage/packages/create-omni-workspace',
 };

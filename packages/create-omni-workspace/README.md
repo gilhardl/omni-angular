@@ -1,6 +1,7 @@
 # create-omni-workspace
 
 Omni install package. This is used to create new Omni workspaces by running any of the following commands:
+
 - `npx create-omni-workspace`
 - `yarn create omni-workspace`
 - `npm init omni-workspace`

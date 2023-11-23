@@ -6,7 +6,7 @@ export default {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/packages/nx-e2e',
+  coverageDirectory: '../../coverage/e2e/nx',
   globalSetup: './scripts/start-local-registry.ts',
   globalTeardown: './scripts/stop-local-registry.ts',
 };
