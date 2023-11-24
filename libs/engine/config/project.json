@@ -1,0 +1,36 @@
+{
+  "name": "config",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/engine/config/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/engine/config",
+        "main": "libs/engine/config/src/index.ts",
+        "tsConfig": "libs/engine/config/tsconfig.lib.json",
+        "assets": ["libs/engine/config/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/engine/config/**/*.ts",
+          "libs/engine/config/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/engine/config/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["type:domain", "scope:engine"]
+}
