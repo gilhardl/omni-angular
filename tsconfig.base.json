@@ -15,8 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@omni/app": ["libs/core/app/src/index.ts"],
-      "@omni/home-feature": ["libs/starter/home/feature/src/index.ts"]
+      "@omni/common": ["packages/common/src/index.ts"],
+      "@omni/common/app": ["libs/common/app/src/index.ts"],
+      "@omni/engine/config": ["libs/engine/config/src/index.ts"],
+      "@omni/engine/db": ["libs/engine/db/src/index.ts"],
+      "@omni/engine/fs": ["libs/engine/fs/src/index.ts"],
+      "@omni/engine/nx": ["libs/engine/nx/src/index.ts"],
+      "@omni/engine/workspaces": ["libs/engine/workspaces/src/index.ts"],
+      "@omni/starter": ["packages/starter/src/index.ts"],
+      "@omni/starter/home-feature": ["libs/starter/home/feature/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

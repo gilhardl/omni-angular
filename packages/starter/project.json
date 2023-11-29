@@ -1,0 +1,44 @@
+{
+  "name": "@omni/starter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/starter/src",
+  "prefix": "omni",
+  "tags": ["type:package", "scope:starter"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "packages/starter/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/starter/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/starter/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/starter/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/starter/**/*.ts",
+          "packages/starter/**/*.html",
+          "packages/starter/package.json"
+        ]
+      }
+    }
+  }
+}

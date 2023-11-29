@@ -1,5 +1,5 @@
 {
-  "name": "@omni/core",
+  "name": "@omni/starter",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^17.0.0",

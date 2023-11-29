@@ -1,23 +1,23 @@
 {
-  "name": "@omni/app",
+  "name": "@omni/common/app",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/core/app/src",
-  "prefix": "omni",
-  "tags": ["type:feature", "scope:core"],
+  "sourceRoot": "libs/common/app/src",
   "projectType": "library",
+  "tags": ["type:lib", "scope:common", "layer:app"],
+  "prefix": "omni",
   "targets": {
     "build": {
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/core/app/ng-package.json"
+        "project": "libs/common/app/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/core/app/tsconfig.lib.prod.json"
+          "tsConfig": "libs/common/app/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/core/app/tsconfig.lib.json"
+          "tsConfig": "libs/common/app/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
@@ -26,7 +26,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/core/app/jest.config.ts"
+        "jestConfig": "libs/common/app/jest.config.ts"
       }
     },
     "lint": {
@@ -34,9 +34,9 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/core/app/**/*.ts",
-          "libs/core/app/**/*.html",
-          "libs/core/app/package.json"
+          "libs/common/app/**/*.ts",
+          "libs/common/app/**/*.html",
+          "libs/common/app/package.json"
         ]
       }
     }

@@ -5,7 +5,7 @@ import {
 } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
-import { appRoutes } from './lib.routes';
+import { appRoutes } from './app.routes';
 
 export const provideApp = (): EnvironmentProviders =>
   makeEnvironmentProviders([
