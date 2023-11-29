@@ -1,0 +1,59 @@
+{
+  "name": "@omni/common",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/common/src",
+  "prefix": "omni",
+  "tags": ["type:package", "scope:core"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/packages/common"],
+      "options": {
+        "project": "packages/common/ng-package.json",
+        "tailwindConfig": "packages/common/tailwind.config.js"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/common/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/common/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "publish": {
+      "command": "node tools/scripts/dist/src/publish.js @omni/core {args.ver} {args.tag} {args.registry}",
+      "dependsOn": ["build"]
+    },
+    "publish:local": {
+      "command": "node tools/scripts/dist/src/publish.js @omni/core {args.ver} next http://localhost:4873",
+      "dependsOn": [
+        "build",
+        {
+          "projects": "@omni/scripts",
+          "target": "build"
+        }
+      ]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/common/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/common/**/*.ts",
+          "packages/common/**/*.html",
+          "packages/common/package.json"
+        ]
+      }
+    }
+  }
+}
