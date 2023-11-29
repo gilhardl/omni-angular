@@ -2,9 +2,9 @@
   "name": "@omni/common/app",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/common/app/src",
-  "prefix": "omni",
-  "tags": ["type:feature", "scope:common"],
   "projectType": "library",
+  "tags": ["type:lib", "scope:common", "layer:app"],
+  "prefix": "omni",
   "targets": {
     "build": {
       "executor": "@nx/angular:ng-packagr-lite",

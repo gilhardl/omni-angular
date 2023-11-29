@@ -2,9 +2,9 @@
   "name": "@omni/common",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/common/src",
-  "prefix": "omni",
-  "tags": ["type:package", "scope:core"],
   "projectType": "library",
+  "tags": ["type:package", "scope:common"],
+  "prefix": "omni",
   "targets": {
     "build": {
       "executor": "@nx/angular:package",

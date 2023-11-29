@@ -2,9 +2,9 @@
   "name": "@omni/home-feature",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/starter/home/feature/src",
-  "prefix": "omni",
-  "tags": ["type:feature", "scope:starter"],
   "projectType": "library",
+  "tags": ["type:lib", "scope:starter", "layer:feature"],
+  "prefix": "omni",
   "targets": {
     "build": {
       "executor": "@nx/angular:ng-packagr-lite",
