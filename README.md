@@ -2,7 +2,12 @@
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
-Omni is a set of libraries and tools to help developers to start building production ready full-stack applications in minutes.
+Omni is a set of libraries and tools intended to help developers to start building production ready full-stack applications in minutes :
+- Omni Studio
+- Omni CLI
+- VS Code extension
+- Nx Plugin
+- Angular libraries
 
 ## Features overview
 
@@ -34,5 +39,5 @@ Omni is a set of libraries and tools to help developers to start building produc
 
 ## Documentation
 
-- [Omni repository organization](./docs/REPOSITORY_ARCHITECTURE.md)
-- [Workspace architecture](./docs/WORKSPACE_ARCHITECTURE.md)
+- [Omni monorepo](./docs/Omni_monorepo.md)
+- [Workspace architecture](./docs/Workspace_architecture.md)
