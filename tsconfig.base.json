@@ -21,7 +21,9 @@
       "@omni/engine/fs": ["libs/engine/fs/src/index.ts"],
       "@omni/engine/nx": ["libs/engine/nx/src/index.ts"],
       "@omni/engine/workspaces": ["libs/engine/workspaces/src/index.ts"],
-      "@omni/home-feature": ["libs/starter/home/feature/src/index.ts"]
+      "@omni/angular/starter/home-feature": [
+        "libs/angular/starter/home/feature/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

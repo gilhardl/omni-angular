@@ -1,9 +1,10 @@
 /* eslint-disable */
 export default {
   displayName: '@omni/home-feature',
-  preset: '../../../../jest.preset.js',
+  preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../../coverage/libs/starter/home/feature',
+  coverageDirectory:
+    '../../../../../coverage/libs/angular/starter/home/feature',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
