@@ -27,8 +27,6 @@ Omni source code repository is organized as following :
 │   │   ├── filesystem - @omni/core/filesystem
 │   │   ├── workspaces - @omni/core/workspaces
 │   │   └── nx - @omni/core/nx
-│   ├── engine
-│   │   └── core - @omni/engine/core
 │   └── studio
 │       ├── core - @omni/studio/core
 │       └── api-client - @omni/studio/api-client
@@ -36,6 +34,7 @@ Omni source code repository is organized as following :
 │   ├── angular
 │   │   ├── core - @omni/core
 │   │   └── ui - @omni/ui
+│   ├── create-omni-workspace - @omni/create-omni-workspace
 │   ├── nx - @omni/nx
 │   └── vscode - @omni/vs-code
 └── tools
