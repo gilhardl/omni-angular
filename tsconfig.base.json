@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@omni/core": ["packages/core/src/index.ts"],
+      "@omni/core": ["packages/angular/core/src/index.ts"],
       "@omni/engine/config": ["libs/engine/config/src/index.ts"],
       "@omni/engine/db": ["libs/engine/db/src/index.ts"],
       "@omni/engine/fs": ["libs/engine/fs/src/index.ts"],
