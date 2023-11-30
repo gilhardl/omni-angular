@@ -65,6 +65,11 @@
     },
     "@nx/angular:component": {
       "style": "scss"
+    },
+    "@nx/js:library": {
+      "bundler": "tsc",
+      "projectNameAndRootFormat": "as-provided",
+      "unitTestRunner": "jest"
     }
   }
 }
