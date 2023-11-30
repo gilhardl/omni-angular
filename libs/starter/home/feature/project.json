@@ -1,5 +1,5 @@
 {
-  "name": "@omni/home-feature",
+  "name": "@omni-starter/home-feature",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/starter/home/feature/src",
   "projectType": "library",

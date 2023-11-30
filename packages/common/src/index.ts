@@ -1,1 +1,1 @@
-export { AppComponent } from '@omni/common/app';
+export { AppComponent } from '@omni-common/app';
