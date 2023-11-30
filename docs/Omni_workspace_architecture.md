@@ -1,4 +1,4 @@
-# Workspace architecture
+# Omni workspace architecture
 
 Omni follow the Domain-Driven Development approach.
 
