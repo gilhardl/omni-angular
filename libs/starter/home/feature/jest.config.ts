@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: '@omni/home-feature',
+  displayName: '@omni-starter/home-feature',
   preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../../coverage/libs/starter/home/feature',
