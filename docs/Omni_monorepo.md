@@ -8,14 +8,14 @@ Omni source code is all in this monorepo with Nx as fundations.
 
 ```
 ┌── apps
-│   ├── api - @omni/api
+│   ├── server - @omni/server
 │   ├── cli - @omni/cli
 │   └── studio
 │       ├── web - @omni/studio-web
 │       └── desktop - @omni/studio-desktop
 ├── libs
-│   ├── api
-│   │   └── core - @omni/api/core
+│   ├── server
+│   │   └── core - @omni/server/core
 │   ├── common
 │   │   └── app - @omni/common/app
 │   ├── core
@@ -48,7 +48,7 @@ Omni source code is all in this monorepo with Nx as fundations.
 
 ### Applications
 
-- `@omni/api` : API used by the Omni Studio (or any other client) to manage workspaces
+- `@omni/server` : Omni Server API
 - `@omni/cli` : Command Line Interface to manage local or Omni cloud workspaces
 - `@omni/studio-web` : Omni Studio web application
 - `@omni/studio-desktop` : Omni Studio desktop application
@@ -64,7 +64,7 @@ Omni source code is all in this monorepo with Nx as fundations.
 
 ### Libraries
 
-- `@omni/api/...` : Omni API related code
+- `@omni/api/...` : Omni Server related code
 - `@omni/common/...` : Omni's main Angular library
 - `@omni/core/...` : core features shared between applications, libraries and packages running in a Node runtime environment to manage an Omni workspace (`@omni/api/...`, `@omni/cli`, `@omni/nx` and `@omni/vs-code`)
 - `@omni/starter/...` : Omni starter pack features
